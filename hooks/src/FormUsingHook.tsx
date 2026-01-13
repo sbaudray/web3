@@ -16,23 +16,26 @@ export function FormUsingHook() {
   );
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input
-        className={errors.username ? "error" : undefined}
-        name="username"
-        placeholder="username"
-        value={values.username}
-        onChange={handleChange}
-      />
-      <input
-        className={errors.password ? "error" : undefined}
-        type="password"
-        name="password"
-        placeholder="password"
-        value={values.password}
-        onChange={handleChange}
-      />
-      <input type="submit" />
-    </form>
+    <div>
+      <h1 style={{ fontSize: 24 }}>Form with custom useForm hook</h1>
+      <form onSubmit={handleSubmit}>
+        <input
+          className={errors.username ? "error" : undefined}
+          name="username"
+          placeholder="username"
+          value={values.username}
+          onChange={handleChange}
+        />
+        <input
+          className={errors.password ? "error" : undefined}
+          type="password"
+          name="password"
+          placeholder="password"
+          value={values.password}
+          onChange={handleChange}
+        />
+        <input type="submit" />
+      </form>
+    </div>
   );
 }

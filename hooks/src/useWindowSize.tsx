@@ -7,6 +7,7 @@ export function useWindowSize() {
   });
 
   // best way now to use useSyncExternalStore
+  // https://react.dev/reference/react/useSyncExternalStore#subscribing-to-a-browser-api
   useEffect(() => {
     function listener() {
       setSize({
