@@ -11,18 +11,6 @@ export function PostIndex() {
     });
   }, []);
 
-  // useEffect(() => {
-  //   const listener = () => {
-  //     console.log("hello");
-  //   };
-
-  //   window.addEventListener("click");
-
-  //   return () => {
-  //     window.removeEventListener("click", listener);
-  //   };
-  // }, []);
-
   if (!posts.length) {
     return <p>Aucun post</p>;
   }

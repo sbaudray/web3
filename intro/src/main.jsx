@@ -18,23 +18,3 @@ createRoot(document.getElementById("root")).render(
     </BrowserRouter>
   </StrictMode>
 );
-
-localhost / localhost / posts / localhost / posts / 1;
-
-// functiion Comp ({children}) {
-//   return (
-//     <div>
-//       {children}
-//     </div>
-//   )
-// }
-
-// function Other () {
-//   return (
-//     <Comp>
-//       <div>
-//         hello
-//       </div>
-//     </Comp>
-//   )
-// }
