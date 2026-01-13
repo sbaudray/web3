@@ -1,0 +1,93 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.modal_overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: grid;
+  place-items: center;
+}
+
+.modal {
+  background: white;
+  min-width: 355px;
+  color: black;
+}
+
+.modal_header {
+  display: flex;
+  padding: 1em;
+  justify-content: space-between;
+}
+
+.modal_body {
+  padding: 1em;
+}
+
+.modal_close_button {
+  color: black;
+  font-size: 32px;
+  border: 0;
+  background: transparent;
+  display: flex;
+  cursor: pointer;
+  padding: 0;
+  margin-left: auto;
+}
+
+.modal_close_icon {
+  display: block;
+  transform: rotate(45deg);
+}
+
+.tooltip {
+  pointer-events: none;
+  background: white;
+  color: black;
+  padding: 0.5em;
+  font-size: 16px;
+  z-index: 9999;
+}
