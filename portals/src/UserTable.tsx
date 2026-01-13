@@ -1,5 +1,19 @@
 import { Fragment } from "react/jsx-runtime";
 
+// function App () {
+//   return (
+//     <>
+//       <ChildA>
+//       <ChildB>
+//       <ChildC>
+//     </>
+//   )
+// }
+
+// function Map () {
+//   return items.map(() => <React.Fragment key={item.id}><ChildX></ChildX></React.Fragment>)
+// }
+
 const users = [
   { id: 1, name: "Charles", age: 21 },
   { id: 2, name: "Jean", age: 17 },

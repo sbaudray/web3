@@ -1,6 +1,7 @@
 import { useMemo, useState } from "react";
 import "./App.css";
-import { MyForm, useWindowSize } from "./customs";
+import { useWindowSize } from "./useWindowSize";
+import { FormUsingHook } from "./FormUsingHook";
 
 function fibonacci(n: number): number {
   if (n === 0) return 0;
@@ -98,7 +99,7 @@ function App() {
 
       <div>
         <h1 style={{ fontSize: 24 }}>Form with custom useForm hook</h1>
-        <MyForm />
+        <FormUsingHook />
       </div>
     </div>
   );
