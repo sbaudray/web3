@@ -38,6 +38,10 @@ function useFetch<T>(url: string) {
     }
 
     doFetch();
+
+    return () => {
+      controller.abort();
+    };
   }, [url]);
 
   return {
