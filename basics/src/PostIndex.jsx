@@ -1,23 +1,5 @@
 import { useState } from "react";
-
-export function MyComponent({ text = "Hello" }) {
-  return <div>{text}</div>;
-}
-
-export function MyComponent(props) {
-  return <div>{props.text ?? "Hello"}</div>;
-}
-
-function Post({ post: { id, title, highlight }, onClick }) {
-  return (
-    <li
-      onClick={() => onClick({ id })}
-      className={highlight ? "highlight" : undefined}
-    >
-      {title}
-    </li>
-  );
-}
+import { Post } from "./Post";
 
 export function PostIndex() {
   const [posts, setPosts] = useState({
