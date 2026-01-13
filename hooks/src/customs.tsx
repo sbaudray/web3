@@ -55,7 +55,7 @@ function useFetch<T>(url: string) {
 // useWindowSize
 // --------
 
-function useWindowSize() {
+export function useWindowSize() {
   const [size, setSize] = useState<{ width: number; height: number }>({
     width: window.innerWidth,
     height: window.innerHeight,
@@ -148,7 +148,7 @@ export function MyForm() {
     password: "",
   } as const;
 
-  function onSubmit(values: typeof initialState) {
+  function onSubmit(values: Record<keyof typeof initialState, string>) {
     console.log(`User submitted those values: ${JSON.stringify(values)}`);
   }
 
