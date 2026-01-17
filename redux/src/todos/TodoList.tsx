@@ -5,29 +5,24 @@ export function TodoList() {
   const dispatch = useAppDispatch();
   const filteredTodos = useAppSelector(selectFilteredTodos);
 
-  const listStyle = {
-    listStyle: "none",
-    padding: 0,
-    marginTop: "20px",
-  };
-
   return (
-    <ul style={listStyle}>
-      {filteredTodos.map(function (todo) {
+    <ul
+      style={{
+        listStyle: "none",
+        padding: 0,
+        margin: 0,
+        display: "grid",
+        gap: 4,
+      }}
+    >
+      {filteredTodos.map((todo) => {
         return (
-          <li
-            key={todo.id}
-            style={{ padding: "5px 0", borderBottom: "1px solid black" }}
-          >
-            <label
-              style={{ display: "flex", gap: "10px", alignItems: "center" }}
-            >
+          <li key={todo.id}>
+            <label style={{ display: "flex", gap: 8, alignItems: "center" }}>
               <input
                 type="checkbox"
                 checked={todo.completed}
-                onChange={function () {
-                  dispatch(todoToggled(todo.id));
-                }}
+                onChange={() => dispatch(todoToggled(todo.id))}
               />
               <span
                 style={{

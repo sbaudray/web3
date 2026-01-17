@@ -1,13 +1,12 @@
 import { useAppDispatch, useAppSelector } from "../app/hooks";
-import { decremented, incremented, reset } from "./counterSlice";
+import { decremented, incremented, reset, selectCounter } from "./counterSlice";
 
 export function Counter() {
-  const count = useAppSelector((state) => state.counter.value);
+  const count = useAppSelector(selectCounter);
   const dispatch = useAppDispatch();
 
   return (
     <div>
-      <h1 style={{ fontSize: 24 }}>Counter</h1>
       <div style={{ fontSize: 24 }}>{count}</div>
       <button onClick={() => dispatch(incremented())}>Increment</button>
       <button onClick={() => dispatch(decremented())}>Decrement</button>

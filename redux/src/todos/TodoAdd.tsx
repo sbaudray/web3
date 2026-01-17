@@ -8,6 +8,7 @@ export function AddTodo() {
 
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
+
     if (text.trim()) {
       dispatch(todoAdded(text));
       setText("");
@@ -15,13 +16,13 @@ export function AddTodo() {
   }
 
   return (
-    <form onSubmit={handleSubmit} style={{ display: "flex", gap: "5px" }}>
+    <form onSubmit={handleSubmit} style={{ display: "flex", gap: 8 }}>
       <input
         value={text}
         onChange={function (e) {
           setText(e.target.value);
         }}
-        placeholder="What needs to be done?"
+        placeholder="Ex: faire les courses"
       />
       <button type="submit">Add</button>
     </form>
