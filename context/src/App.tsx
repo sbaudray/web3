@@ -8,7 +8,7 @@ import { Separator } from "./Separator";
 import { ThemeProvider } from "./ThemeContext";
 import { ThemeToggle } from "./ThemeToggle";
 import { ThemedBox } from "./ThemedBox";
-import { I18nProvider } from "./i18nContext";
+import { I18nProvider } from "./I18nContext";
 
 function App() {
   return (

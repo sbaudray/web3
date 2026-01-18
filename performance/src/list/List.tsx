@@ -14,15 +14,15 @@ export function List() {
     { id: 4, value: 20 },
   ]);
 
-  const countOfValuesHigherThan10 = useMemo(() => {
-    return items.filter((item) => item.value > 10).length;
-  }, [items]);
-
   function addItem() {
     const newItem = { id: Date.now(), value: Math.floor(Math.random() * 20) };
 
     setItems((items) => [...items, newItem]);
   }
+
+  const countOfValuesHigherThan10 = useMemo(() => {
+    return items.filter((item) => item.value > 10).length;
+  }, [items]);
 
   return (
     <div style={{ display: "grid", padding: 16 }}>

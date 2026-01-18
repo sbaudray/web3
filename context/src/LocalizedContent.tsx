@@ -1,4 +1,4 @@
-import { useI18n } from "./i18nContext";
+import { useI18n } from "./I18nContext";
 
 export function LocalizedContent() {
   const { t } = useI18n();
